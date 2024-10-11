@@ -97,6 +97,10 @@
 		<a component="post/reply" href="#" class="btn-ghost-sm {{{ if !privileges.topics:reply }}}hidden{{{ end }}}" title="[[topic:reply]]"><i class="fa fa-fw fa-reply text-primary"></i></a>
 		<a component="post/quote" href="#" class="btn-ghost-sm {{{ if !privileges.topics:reply }}}hidden{{{ end }}}" title="[[topic:quote]]"><i class="fa fa-fw fa-quote-right text-primary"></i></a>
 
+		<a component="post/endorse" href="#" class="btn-ghost-sm" title="Endorse">
+			<i class="fa fa-fw fa-thumbs-up text-success"></i> Endorse
+		</a>
+
 		{{{ if !reputation:disabled }}}
 		<div class="d-flex votes align-items-center">
 			<a component="post/upvote" href="#" class="btn-ghost-sm{{{ if posts.upvoted }}} upvoted{{{ end }}}" title="[[topic:upvote-post]]">
