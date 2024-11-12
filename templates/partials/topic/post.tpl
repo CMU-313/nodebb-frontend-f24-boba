@@ -58,9 +58,16 @@
 				<a href="{config.relative_path}/post/{./pid}" class="post-index text-muted d-none d-md-inline">#{increment(./index, "1")}</a>
 			</div>
 		</div>
+		
+		{{{if !posts.isEnglish }}}
+		        <div class="sensitive-content-message">
+		        <a class="btn btn-sm btn-primary view-translated-btn">Click here to view the translated message.</a>
+		        </div>
+		        <div class="translated-content" style="display:none;">
+		        {posts.translatedContent}
+		        </div>
+	        {{{end}}}
 
-		<div class="content mt-2 text-break" component="post/content" itemprop="text">
-			{posts.content}
 		</div>
 	</div>
 </div>
